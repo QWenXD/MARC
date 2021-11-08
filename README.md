@@ -23,7 +23,7 @@ The other Node.js instance hosts the GUI front-end.
 
 Both Node.JS instances listen on localhost only. For public access, they are intended to be placed behind a reverse caching proxy (such as Apache). 
 
-There is a live example hosted at https://marcdev.duckdns.org on a Debian linux virtual machine. It will only be live until august. 
+There is a live example hosted at https://marcdev.duckdns.org on a Debian linux virtual machine. It will only be live until august 2021. 
 
  *(It is hosted in south Auckland by SiteHost who have donated the hosting.)*
 
