@@ -9,7 +9,7 @@ Node.js || Express Server || Squelize ORM || SQLite || Mocha testing || POSTMAN 
 
 **Frontend**
 
-React || Nodemailer || HTML || CSS
+Node.js || React || Nodemailer || HTML || CSS
 
 ## Architecture
 
