@@ -46,8 +46,6 @@ From a command line, perform the following:
 `npm start` *(will load the Node.js development server. It will listen on localhost)*.
 
 
-![image](https://user-images.githubusercontent.com/69673783/113281683-65cd2580-9342-11eb-8ccf-88ad27b1777f.png)
-
 # Frontend Installation Instructions
 In a different terminal, switch to the `Frontend_React` directory. For example:
 
