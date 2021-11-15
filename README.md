@@ -1,44 +1,90 @@
 # M. A. R. C.
 # Marker Allocation Reconciliation Configurator 
-A web-based tool for organizing markers (by Team 6) for Compsci 399
+A web-based tool that allows marker coordinator organize markers 
 
-## Built using
-+ Node.js
-+ Express web application framework
+## Technology used
+**Backend**
 
-+ Squelize ORM
-+ SQLite in file-back-end mode
+Node.js || Express Server || Squelize ORM || SQLite || Mocha testing || POSTMAN (API testing)
 
-+ Mocha testing framework
+**Frontend**
 
-+ React
-+ HTML/CSS/Javascript
+Node.js || React || Nodemailer || HTML || CSS
 
-## Backend Installation Instructions:
+## Architecture
+
+The repository contains two Node.js projects. Each is in its own directory:
++ Backend_NodeJS 
++ Frontend_React 
+
+One Node.js instance hosts the back-end server, its API & Sqlite-database.
+
+The other Node.js instance hosts the GUI front-end. 
+
+Both Node.JS instances listen on localhost only. For public access, they are intended to be placed behind a reverse caching proxy (such as Apache). 
+
+There is a live example hosted at https://marcdev.duckdns.org on a Debian linux virtual machine. It will only be live until august 2021. 
+
+ *(It is hosted in south Auckland by SiteHost who have donated the hosting.)*
+
+
+# Backend Installation Instructions:
+
+## Clone the repository
+From a command line, perform the following:
 
 `git clone https://github.com/uoa-compsci-399/MARC.git`
 
-`cd MARC/src` *(changes directory to /src. This is important. Our Nodejs program lives there, not the root of the repo)* 
+`cd MARC/Backend_NodeJS` 
 
-`npm install` *This will install dependencies.  (express sequelize sqlite3 body-parser cors)*
 
-![image](https://user-images.githubusercontent.com/80251770/113613893-efb02200-96a5-11eb-84a1-e9af5a4a9db8.png)
+`npm install` *This will install dependencies.  (express, sqlite, etc)*
 
-## To start the server
 
-`npm start` will load the Node.js http application server. Then visit http://localhost:8080/
+## Start the back-end server
 
-![image](https://user-images.githubusercontent.com/80251770/113612930-91cf0a80-96a4-11eb-9be5-8dd564c60d33.png)
-![image](https://user-images.githubusercontent.com/69673783/113281683-65cd2580-9342-11eb-8ccf-88ad27b1777f.png)
+`npm start` *(will load the Node.js development server. It will listen on localhost)*.
 
-## Directory contents
-+ Our app actually lives in /src so we can throw in unrelated files elsewhere.
-+ .github/workflows contains a config file that instructs GitHub to do our CI/CD tests.
-+ Check the readme.txt in /src
 
-## Dependencies
-Npm knows which dependencies to install because the *package.json* file already has the dependencies registered. They were registered by doing the following:
+# Frontend Installation Instructions
+In a different terminal, switch to the `Frontend_React` directory. For example:
 
-`npm install express sequelize sqlite3 body-parser cors multer nodemailer --save
-npm install --save-dev mocha supertest`
+`cd MARC/Frontend_React`
+
+## Install React's dependencies
+
+`npm install`
+
+This may take some time. Once it is complete, launch the React application with:
+
+`npm start`
+
+
+# Dependencies
+Npm knows which dependencies to install because the *package.json* file already has the dependencies registered. 
+
+
+# Testing
+There's a github workflow script which executes integration tests using our Mocha framework. There are no significant tests written (due to time limits)
+However, we tested all the api endpoints with POSTMAN
+
+# Future plans
+Authentication needs to be merged into the mainline branch.
+
+Marc should be cable of detecting a wide variety of business-logic scenarios, which leads to better & more useful visual filters and automatic emails.
+
+Auto-allocation tools can be implemented either globally or partially.
+
+Previous-semester's Marc databases could be used to pre-compute 'students who had previously marked this course' & other information.
+
+# Acknowledgements
+Building Backend based on 
+* https://bezkoder.com/node-js-express-sequelize-mysql/
+
+Building Frontend based on 
+* https://bezkoder.com/react-crud-web-api/
+
+
+
+
 
